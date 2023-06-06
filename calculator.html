@@ -1,0 +1,72 @@
+<html>
+
+<head>
+    <title>Calculator</title>
+</head>
+
+<body>
+
+    <script>
+        let firstNumber = 0
+        let operator = ""
+        function digit(dig) {
+            if (dig == "0") {
+                if (scrn.value != "") {
+                    scrn.value = scrn.value + dig
+                }
+
+            } else {
+                scrn.value = scrn.value + dig
+            }
+        }
+
+        function operation(sign) {
+            operation = signfirstNumber = parseInt(scrn.value)
+            scrn.value = ""
+        }
+
+        function clearScreen() {
+            scrn.value = ""
+        }
+
+        function showResults() {
+            switch (operator) {
+                case "+": scrn.value = firstNumber + parseInt(scrn.value); break;
+                case "-": scrn.value = firstNumber - parseInt(scrn.value); break;
+                case "x": scrn.value = firstNumber * parseInt(scrn.value); break;
+                case "/": scrn.value = firstNumber / parseInt(scrn.value); break;
+            }
+        }
+
+    </script>
+
+    <input type="text" id="scrn"> <br>
+
+    <table>
+        <tr>
+            <td><input type="button" value="0" id="btn0" onclick="digit('0')"></td>
+            <td><input type="button" value="1" id="btn1" onclick="digit('1')"></td>
+            <td><input type="button" value="2" id="btn2" onclick="digit('2')"></td>
+            <td><input type="button" value="+" id="btnPlus"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="3" id="btn3" onclick="digit('3')"></td>
+            <td><input type="button" value="4" id="btn4" onclick="digit('4')"></td>
+            <td><input type="button" value="5" id="btn5" onclick="digit('5')"></td>
+            <td><input type="button" value="-" id="btnMinus" onclick="operation('-')"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="6" id="btn6" onclick="digit('6')"></td>
+            <td><input type="button" value="7" id="btn7" onclick="digit('7')"></td>
+            <td><input type="button" value="8" id="btn8" onclick="digit('8')"></td>
+            <td><input type="button" value="x" id="btnMultiply" onclick="operation('x')"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="9" id="btn9" onclick="digit('9')"></td>
+            <td><input type="button" value="C" id="btnClear" onclick="clearScreen()"></td>
+            <td><input type="button" value="=" id="btnEqual" onclick="showResults()"></td>
+            <td><input type="button" value="/" id="btnDivid" onclick="operation('/')"></td>
+        </tr>
+    </table>
+
+</html>

@@ -1,0 +1,33 @@
+<html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        function addition() {
+            let A = num1.value
+            let B = num1.value
+            let result = parseInt(A) + parseInt(B)
+            num3.value = result
+        }
+    </script>
+
+    First Number:<input id="num1" type="text"><br>
+    Second Number:<input id="num2" type="text"><br>
+    <input type="Button" value="+" onclick="addition()"><br>
+    <input type="Button" value="-" onclick="subtraction()"><br>
+    <input type="Button" value="/" onclick="division()"><br>
+    <input type="Button" value="*" onclick="multiply()"><br>
+
+    Result:<input id="num3" type="text"><br>
+
+</body>
+
+</html>
